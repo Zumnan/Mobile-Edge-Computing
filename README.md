@@ -83,11 +83,13 @@ Algorithm 1: Dynamic Intelligent Edge Task Offloading
    (traffic_load_weight * traffic_load) + (user_behavior_weight *       
          user_behavior)
 
-5.	     If offloading_score > threshold:
-              Offloading Decision = "Edge Cloud"
-6.	          Else:
-              Offloading Decision = "Mobile Device"
-7.	Return Offloading Decision
+5.	     Create a feature vector using the relevant features from   the current row: feature_vector = [Downlink traffic, Duration, Latency]
+6.	     Scale the feature vector using the pre-trained StandardScaler: scaled_feature_vector = scaler.transform([feature_vector])
+7.	     Use the trained Random Forest model to predict the offloading decision: decision_index = rf_model.predict(scaled_feature_vector)[0]
+8.	     Map the decision index to the corresponding label:
+ffloading_decision = index_to_label[decision_index]
+9.	Return Offloading Decision:      
+
 
 
 Algorithm 2: Ensemble Model (Random Forest, Gradient Boosting, Support Vector Machines)
