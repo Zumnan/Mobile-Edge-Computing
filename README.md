@@ -72,7 +72,7 @@ The dynamic intelligent edge task offloading algorithm is implemented to evaluat
 
 To implement the algorithm, we utilize the selected dataset, which contains relevant features for task offloading evaluation. These features include LAC, CI, RAT, Start Time, End Time, Duration, Uplink Traffic, Downlink Traffic, Source IP, Destination IP, URL, Latency, and User Agent. We preprocess the dataset, ensuring data quality and privacy protection.
 
-The implementation involves developing decision-making logic and load-balancing mechanisms based on the available dataset information. We leverage machine learning techniques, such as deep learning and reinforcement learning, to train models that can predict the optimal offloading decisions for given network conditions and task characteristics. The trained models are then utilized in the offloading process to determine whether to offload tasks to the edge cloud or execute them locally on the mobile device.
+The implementation involves developing decision-making logic and load-balancing mechanisms based on the available dataset information. We leverage machine learning techniques, such as deep learning, random forest algorithm and reinforcement learning, to train models that can predict the optimal offloading decisions for given network conditions and task characteristics. The trained models are then utilized in the offloading process to determine whether to offload tasks to the edge cloud or execute them locally on the mobile device.
 
 Algorithm 1: Dynamic Intelligent Edge Task Offloading
 1.	Input: Dataset (unseen_dataset)
